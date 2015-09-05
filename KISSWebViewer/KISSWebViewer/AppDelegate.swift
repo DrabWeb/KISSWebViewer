@@ -103,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    // A reference to the menu item trhat locks the window aspect ratio
+    // A reference to the menu item that locks the window aspect ratio
     @IBOutlet weak var lockAspectRatioMenuItem: NSMenuItem!
     
     // When the user presses the lock aspect ratio menu item...
@@ -115,10 +115,95 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.aspectRatio = NSSize(width: window.frame.width, height: window.frame.height);
     }
     
+    // A bool determining if the web view helpers window is hidden
+    var canClickThrough : Bool = false;
+    
+    // A reference to the menu item that checks if we want to be able to click through
+    @IBOutlet weak var clickThroughMenuItem: NSMenuItem!
+    
+    // When the user presses the click through menu item...
+    @IBAction func clickThroughMenuItemInteracted(sender: AnyObject) {
+        // If we are currently saying we can click through...
+        if(canClickThrough) {
+            // Say its not clickable through
+            canClickThrough = false;
+            
+            // Remove the check by the appropriate menu item
+            clickThroughMenuItem.state = 0;
+            
+            // Tell the window to accept mouse events
+           window.ignoresMouseEvents = false;
+        }
+        else {
+            // Say its clickable through
+            canClickThrough = true;
+            
+            // Add the check by the appropriate menu item
+            clickThroughMenuItem.state = 1;
+            
+            // Tell the window to ignore mouse events
+            window.ignoresMouseEvents = true;
+        }
+    }
+    
+    // A bool determining if the web view helpers window is hidden
+    var connectingSpaces : Bool = false;
+    
+    // A reference to the menu item that checks if we want to join all spaces
+    @IBOutlet weak var connectSpacesMenuItem: NSMenuItem!
+    
+    // When the user presses the connect spaces menu item...
+    @IBAction func connectSpacesMenuItemInteracted(sender: AnyObject) {
+        // If the window is already connecting spaces
+        if(connectingSpaces) {
+            // Say its not joining
+            connectingSpaces = false;
+            
+            // Remove the check by the appropriate menu item
+            connectSpacesMenuItem.state = 0;
+            
+            // Tell the window to stop joining spaces
+            window.collectionBehavior = NSWindowCollectionBehavior.Default;
+        }
+        else {
+            // Say its joining
+            connectingSpaces = true;
+            
+            // Add the check by the appropriate menu item
+            connectSpacesMenuItem.state = 1;
+            
+            // Tell the window to join spaces
+            window.collectionBehavior = NSWindowCollectionBehavior.CanJoinAllSpaces;
+        }
+    }
+    
+    // A reference to the menu item that checks if we want to have a shadow on the window
+    @IBOutlet weak var shadowMenuItem: NSMenuItem!
+    
+    // When the user presses the shadow menu item...
+    @IBAction func shadowMenuItemInteracted(sender: AnyObject) {
+        // If the window already has a shadow...
+        if(window.hasShadow) {
+            // Remove the check by the appropriate menu item
+            shadowMenuItem.state = 0;
+            
+            // Tell the window to hide the shadow
+            window.hasShadow = false;
+        }
+        else {
+            // Add the check by the appropriate menu item
+            shadowMenuItem.state = 1;
+            
+            // Tell the window to have a shadow
+            window.hasShadow = true;
+        }
+    }
+    
+    
     // A reference to the slider for the windows alpha value
     @IBOutlet weak var alphaSlider: NSSlider!
     
-    // When the user changes teh alpha sliders value
+    // When the user changes the alpha sliders value
     @IBAction func alphaSliderInteracted(sender: AnyObject) {
         // Set the main windows alpha value to the one we just entered
         window.alphaValue = CGFloat(alphaSlider.floatValue);
@@ -144,23 +229,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Setup the windows we display to be visually appealing
         setupWindows();
         
-        // Set the float menu item keybind to used the control key
-        floatMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
-        
-        // And the f key
-        floatMenuItem.keyEquivalent = "f";
-        
-        // Set the hide helper menu item keybind to used the control key
-        hideHelperMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
-        
-        // And the h key
-        hideHelperMenuItem.keyEquivalent = "h";
-        
-        // Set the lock aspect ratio menu item keybind to used the control key
-        lockAspectRatioMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
-        
-        // And the r key
-        lockAspectRatioMenuItem.keyEquivalent = "r";
+        // Setup the menu item keybinds
+        setupMenuItemKeybinds();
         
         // Start the timer that sets the url field value to the currently loaded page
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: Selector("refreshURLBar"), userInfo: nil, repeats:true);
@@ -180,14 +250,55 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // This sets the url bar value to teh currently loaded page
     func refreshURLBar() {
-        // Set the url field value to the webview URL
-        urlField.stringValue = webView.mainFrameURL;
+        // If the webview is loading
+        if(webView.loading) {
+            // Set the url field value to the webview URL
+            urlField.stringValue = webView.mainFrameURL;
+        }
     }
     
     // Refreshes the webview
     func refresh() {
         // Call the reload function
         webView.reload(self);
+    }
+    
+    func setupMenuItemKeybinds() {
+        // Set the float menu item keybind to used the control key
+        floatMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
+        
+        // And the f key
+        floatMenuItem.keyEquivalent = "f";
+        
+        // Set the hide helper menu item keybind to used the control key
+        hideHelperMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
+        
+        // And the h key
+        hideHelperMenuItem.keyEquivalent = "h";
+        
+        // Set the lock aspect ratio menu item keybind to used the control key
+        lockAspectRatioMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
+        
+        // And the r key
+        lockAspectRatioMenuItem.keyEquivalent = "r";
+        
+        // Set the click through menu item keybind to used the control key
+        clickThroughMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
+        
+        // And the r key
+        clickThroughMenuItem.keyEquivalent = "t";
+        
+        // Set the connect spaces menu item keybind to used the control key
+        connectSpacesMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
+        
+        // And the r key
+        connectSpacesMenuItem.keyEquivalent = "s";
+        
+        // Set the shadow menu item keybind to used the control key
+        shadowMenuItem.keyEquivalentModifierMask = Int(NSEventModifierFlags.ControlKeyMask.rawValue);
+        
+        // And the q key
+        shadowMenuItem.keyEquivalent = "q";
     }
     
     func setupWindows() {

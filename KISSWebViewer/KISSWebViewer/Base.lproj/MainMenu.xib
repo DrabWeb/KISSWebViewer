@@ -15,10 +15,14 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="KISSWebViewer" customModuleProvider="target">
             <connections>
                 <outlet property="alphaSlider" destination="Bk5-RN-jVB" id="w4u-aE-Bi4"/>
+                <outlet property="clickThroughMenuItem" destination="k6i-yj-eIt" id="9LF-KE-GeY"/>
+                <outlet property="clickThroughMenuItemInteracted" destination="k6i-yj-eIt" id="05q-6D-Ehg"/>
+                <outlet property="connectSpacesMenuItem" destination="Uex-Qy-0f0" id="hT6-mx-DhP"/>
                 <outlet property="floatMenuItem" destination="kPP-a5-AFC" id="1Dt-Dd-fWS"/>
                 <outlet property="hideHelperMenuItem" destination="VeN-dD-74f" id="hkX-1I-yGE"/>
                 <outlet property="lockAspectRatioMenuItem" destination="gE0-Ee-h52" id="Hh5-Tu-Bj1"/>
                 <outlet property="refreshTimerTextField" destination="LbA-dG-CWQ" id="O4p-VY-gKj"/>
+                <outlet property="shadowMenuItem" destination="o7I-W3-bEB" id="M5m-eO-YbA"/>
                 <outlet property="urlField" destination="LiO-8S-dxL" id="Ukf-EM-8uK"/>
                 <outlet property="webView" destination="x6Z-w5-0WR" id="BRm-FS-oVt"/>
                 <outlet property="webViewHelpersWindow" destination="7GB-cf-n5N" id="IVN-Vn-cxW"/>
@@ -320,21 +324,39 @@
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
                             <menuItem title="Float" keyEquivalent="f" id="kPP-a5-AFC">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <modifierMask key="keyEquivalentModifierMask" control="YES"/>
                                 <connections>
                                     <action selector="floatMenuItemInteracted:" target="Voe-Tx-rLC" id="o7U-Ve-wnx"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Helper Hidden" keyEquivalent="h" id="VeN-dD-74f">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <modifierMask key="keyEquivalentModifierMask" control="YES"/>
                                 <connections>
                                     <action selector="hideHelperMenuItemInteracted:" target="Voe-Tx-rLC" id="D0e-Bk-chW"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Lock Aspect Ratio" keyEquivalent="r" id="gE0-Ee-h52">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <modifierMask key="keyEquivalentModifierMask" control="YES"/>
                                 <connections>
                                     <action selector="lockAspectRatioMenuItemInteracted:" target="Voe-Tx-rLC" id="k2E-v7-uLz"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Click Through" keyEquivalent="t" id="k6i-yj-eIt">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                <connections>
+                                    <action selector="clickThroughMenuItemInteracted:" target="Voe-Tx-rLC" id="QMQ-sk-PHo"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Connect Spaces" keyEquivalent="s" id="Uex-Qy-0f0">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                <connections>
+                                    <action selector="connectSpacesMenuItemInteracted:" target="Voe-Tx-rLC" id="UtJ-R4-dAj"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Shadow" state="on" keyEquivalent="q" id="o7I-W3-bEB">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                <connections>
+                                    <action selector="shadowMenuItemInteracted:" target="Voe-Tx-rLC" id="M6q-Hg-PfV"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="SGm-1F-wf8"/>

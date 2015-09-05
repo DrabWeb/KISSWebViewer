@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		5D6FA2FC1B88C21400A72729 /* KISSWebViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KISSWebViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6FA3001B88C21400A72729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D6FA3011B88C21400A72729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D6FA3011B88C21400A72729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		5D6FA3031B88C21400A72729 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5D6FA3061B88C21400A72729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5D6FA30C1B88C21400A72729 /* KISSWebViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KISSWebViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +396,7 @@
 				5D6FA3181B88C21400A72729 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D6FA3191B88C21400A72729 /* Build configuration list for PBXNativeTarget "KISSWebViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +405,7 @@
 				5D6FA31B1B88C21400A72729 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

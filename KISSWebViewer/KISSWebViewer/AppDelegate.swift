@@ -246,8 +246,217 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Set the url field value to the homepage
         urlField.stringValue = webView.mainFrameURL;
+        
+        // Check if the /tmp/kisswebviewer file exists, to see if we launched from the command line
+        if(NSFileManager.defaultManager().fileExistsAtPath("/tmp/kisswebviewer")) {
+            // Open the specified URL with the options from /tmp/kisswebviewer
+            openFromTmp();
+        }
     }
     
+    // Use this when we know that /tmp/kisswebviewer exists, meaning it was launched from the command line
+    func openFromTmp() {
+        // Load the text of the /tmp/ file that says what the web page should be
+        let location = "/tmp/kisswebviewer";
+        let fileContent = try! String(contentsOfFile: location, encoding: NSUTF8StringEncoding);
+        print(fileContent);
+        
+        // Split the file contents on every new line
+        // Line 1 == URL
+        // Line 2 == Float
+        // Line 3 == Hide Helper
+        // Line 4 == Lock Aspect Ratio
+        // Line 5 == Click Through
+        // Line 6 == Connect Spaces
+        // Line 7 == Shadow
+        // Line 8 == Window X
+        // Line 9 == Window Y
+        // Line 10 == Window Width
+        // Line 11 == Window Height
+        let webviewSettings : [NSString] = fileContent.characters.split{$0 == "\n"}.map(String.init);
+        
+        // Show the webpage
+        let webURL : NSURL = NSURL(string: webviewSettings[0] as String)!;
+        var webFloat : Bool = false;
+        var webHideHelper : Bool = false;
+        var webLockAspectRatio : Bool = false;
+        var webClickThrough : Bool = false;
+        var webConnectSpaces : Bool = false;
+        var webShadow : Bool = true;
+        let webWindowRect : NSRect = NSRect(x: webviewSettings[7].integerValue, y: webviewSettings[8].integerValue, width: webviewSettings[9].integerValue, height: webviewSettings[10].integerValue);
+        
+        // Load all the bools, this is really tedious.
+        // Window float
+        if(webviewSettings[1] == "true") {
+            webFloat = true;
+        }
+        else {
+            webFloat = false;
+        }
+        
+        // Hide helper window
+        if(webviewSettings[2] == "true") {
+            webHideHelper = true;
+        }
+        else {
+            webHideHelper = false;
+        }
+        
+        //  Window aspect ratio lock
+        if(webviewSettings[3] == "true") {
+            webLockAspectRatio = true;
+        }
+        else {
+            webLockAspectRatio = false;
+        }
+        
+        // Window click through
+        if(webviewSettings[4] == "true") {
+            webClickThrough = true;
+        }
+        else {
+            webClickThrough = false;
+        }
+        
+        // Window move to active space
+        if(webviewSettings[5] == "true") {
+            webConnectSpaces = true;
+        }
+        else {
+            webConnectSpaces = false;
+        }
+        
+        // Window shadow
+        if(webviewSettings[6] == "true") {
+            webShadow = true;
+        }
+        else {
+            webShadow = false;
+        }
+        
+        // Set the window frame
+        window.setFrame(webWindowRect, display: true);
+        
+        // Load the specified URL
+        webView.mainFrame.loadRequest(NSURLRequest(URL: webURL));
+        
+        print(webFloat);
+        print(webHideHelper);
+        print(webLockAspectRatio);
+        print(webClickThrough);
+        print(webConnectSpaces);
+        print(webShadow);
+        
+        // Go through and set all the options
+        
+        // Window float
+        if(webFloat) {
+            // Make the window level 250, so it floats
+            window.level = 250;
+            
+            // Set the float menu item to have a check beside it
+            floatMenuItem.state = 1;
+        }
+        else {
+            // Set the level back to usual (0)
+            window.level = 0;
+            
+            // Remove the check beside the float menu item
+            floatMenuItem.state = 0;
+        }
+        
+        // Hide helper window
+        if(webHideHelper) {
+            // Say its hidden
+            helperWindowHidden = true;
+            
+            // Add the check by the appropriate menu item
+            hideHelperMenuItem.state = 1;
+            
+            // Order out the helpers window
+            webViewHelpersWindow.orderOut(self);
+        }
+        else {
+            // Say its not hidden
+            helperWindowHidden = false;
+    
+            // Remove the check by the appropriate menu item
+            hideHelperMenuItem.state = 0;
+    
+            // Order front the helpers window
+            webViewHelpersWindow.orderFrontRegardless();
+        }
+        
+        // Window lock aspect ratio
+        if(webLockAspectRatio) {
+            // Disable / hide the menu item
+            lockAspectRatioMenuItem.hidden = true;
+            
+            // Lock the aspect ratio to the current window size
+            window.aspectRatio = NSSize(width: window.frame.width, height: window.frame.height);
+        }
+        
+        // Window click through
+        if(webClickThrough) {
+            // Say its clickable through
+            canClickThrough = true;
+            
+            // Add the check by the appropriate menu item
+            clickThroughMenuItem.state = 1;
+            
+            // Tell the window to ignore mouse events
+            window.ignoresMouseEvents = true;
+        }
+        else {
+            // Say its not clickable through
+            canClickThrough = false;
+            
+            // Remove the check by the appropriate menu item
+            clickThroughMenuItem.state = 0;
+            
+            // Tell the window to accept mouse events
+            window.ignoresMouseEvents = false;
+        }
+        
+        // Window move to active space
+        if(webConnectSpaces) {
+            // Say its joining
+            connectingSpaces = true;
+                
+            // Add the check by the appropriate menu item
+            connectSpacesMenuItem.state = 1;
+                
+            // Tell the window to join spaces
+            window.collectionBehavior = NSWindowCollectionBehavior.CanJoinAllSpaces;
+        }
+        else {
+            // Say its not joining
+            connectingSpaces = false;
+            
+            // Remove the check by the appropriate menu item
+            connectSpacesMenuItem.state = 0;
+            
+            // Tell the window to stop joining spaces
+            window.collectionBehavior = NSWindowCollectionBehavior.Default;
+        }
+        
+        // Window shadow
+        if(webShadow) {
+            // Add the check by the appropriate menu item
+            shadowMenuItem.state = 1;
+            
+            // Tell the window to have a shadow
+            window.hasShadow = true;
+        }
+        else {
+            // Remove the check by the appropriate menu item
+            shadowMenuItem.state = 0;
+            
+            // Tell the window to hide the shadow
+            window.hasShadow = false;
+        }
+    }
+
     // This sets the url bar value to teh currently loaded page
     func refreshURLBar() {
         // If the webview is loading
@@ -307,25 +516,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Hide the background
         window.backgroundColor = NSColor.clearColor();
-        window.opaque = true;
+        window.opaque = false;
         
         // Hide the titlebar
         window.titlebarAppearsTransparent = true;
-        
-        // Hide the title
         window.titleVisibility = NSWindowTitleVisibility.Hidden;
-        
-        // Hide the close button
-        var closeButton : NSButton = window.standardWindowButton(NSWindowButton.CloseButton)!;
-        closeButton.hidden = true;
-        
-        // Hide the minimize button
-        var minimizeButton : NSButton = window.standardWindowButton(NSWindowButton.MiniaturizeButton)!;
-        minimizeButton.hidden = true;
-        
-        // Hide the zoom button
-        var maximizeButton : NSButton = window.standardWindowButton(NSWindowButton.ZoomButton)!;
-        maximizeButton.hidden = true;
+        window.standardWindowButton(NSWindowButton.CloseButton)!.superview?.superview?.removeFromSuperview();
         
         // Setup the helpers window
         

@@ -457,7 +457,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    // This sets the url bar value to teh currently loaded page
+    // This sets the url bar value to the currently loaded page
     func refreshURLBar() {
         // If the webview is loading
         if(webView.loading) {

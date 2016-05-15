@@ -470,7 +470,7 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
                     pipPosition = .BottomRight;
                 }
             }
-            else if(theEvent.scrollingDeltaX < 0) {
+            else if(theEvent.scrollingDeltaX > 0) {
                 if(pipPosition == .BottomRight) {
                     pipPosition = .BottomLeft;
                 }
@@ -478,7 +478,7 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
                     pipPosition = .TopLeft;
                 }
             }
-            else if(theEvent.scrollingDeltaX > 0) {
+            else if(theEvent.scrollingDeltaX < 0) {
                 if(pipPosition == .BottomLeft) {
                     pipPosition = .BottomRight;
                 }

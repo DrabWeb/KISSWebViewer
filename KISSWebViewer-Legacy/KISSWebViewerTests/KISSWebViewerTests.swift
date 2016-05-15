@@ -2,12 +2,12 @@
 //  KISSWebViewerTests.swift
 //  KISSWebViewerTests
 //
-//  Created by Seth on 2016-05-15.
-//  Copyright © 2016 DrabWeb. All rights reserved.
+//  Created by Seth on 2015-08-22.
+//  Copyright (c) 2015 DrabWeb. All rights reserved.
 //
 
+import Cocoa
 import XCTest
-@testable import KISSWebViewer
 
 class KISSWebViewerTests: XCTestCase {
     
@@ -23,12 +23,12 @@ class KISSWebViewerTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true, "Pass")
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
     }

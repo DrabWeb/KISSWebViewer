@@ -7,42 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D6FA3021B88C21400A72729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6FA3011B88C21400A72729 /* AppDelegate.swift */; };
-		5D6FA3041B88C21400A72729 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6FA3031B88C21400A72729 /* Images.xcassets */; };
-		5D6FA3071B88C21400A72729 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6FA3051B88C21400A72729 /* MainMenu.xib */; };
-		5D6FA3131B88C21400A72729 /* KISSWebViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6FA3121B88C21400A72729 /* KISSWebViewerTests.swift */; };
+		5D875CC61CE908F900F5F5D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D875CC51CE908F900F5F5D2 /* AppDelegate.swift */; };
+		5D875CC81CE908F900F5F5D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D875CC71CE908F900F5F5D2 /* ViewController.swift */; };
+		5D875CCA1CE908F900F5F5D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D875CC91CE908F900F5F5D2 /* Assets.xcassets */; };
+		5D875CCD1CE908F900F5F5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D875CCB1CE908F900F5F5D2 /* Main.storyboard */; };
+		5D875CD81CE908F900F5F5D2 /* KISSWebViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D875CD71CE908F900F5F5D2 /* KISSWebViewerTests.swift */; };
+		5D875CE31CE908F900F5F5D2 /* KISSWebViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D875CE21CE908F900F5F5D2 /* KISSWebViewerUITests.swift */; };
+		5D875CF11CE90D1A00F5F5D2 /* KWAlwaysActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D875CF01CE90D1A00F5F5D2 /* KWAlwaysActiveTextField.swift */; };
+		5D875CF31CE91A0700F5F5D2 /* KWTitlebarVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D875CF21CE91A0700F5F5D2 /* KWTitlebarVisualEffectView.swift */; };
+		5D875CF91CE91FB900F5F5D2 /* KWScrollCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D875CF81CE91FB900F5F5D2 /* KWScrollCaptureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5D6FA30D1B88C21400A72729 /* PBXContainerItemProxy */ = {
+		5D875CD41CE908F900F5F5D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5D6FA2F41B88C21400A72729 /* Project object */;
+			containerPortal = 5D875CBA1CE908F900F5F5D2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5D6FA2FB1B88C21400A72729;
+			remoteGlobalIDString = 5D875CC11CE908F900F5F5D2;
+			remoteInfo = KISSWebViewer;
+		};
+		5D875CDF1CE908F900F5F5D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D875CBA1CE908F900F5F5D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D875CC11CE908F900F5F5D2;
 			remoteInfo = KISSWebViewer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D6FA2FC1B88C21400A72729 /* KISSWebViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KISSWebViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D6FA3001B88C21400A72729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D6FA3011B88C21400A72729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
-		5D6FA3031B88C21400A72729 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5D6FA3061B88C21400A72729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		5D6FA30C1B88C21400A72729 /* KISSWebViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KISSWebViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D6FA3111B88C21400A72729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D6FA3121B88C21400A72729 /* KISSWebViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISSWebViewerTests.swift; sourceTree = "<group>"; };
+		5D875CC21CE908F900F5F5D2 /* KISSWebViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KISSWebViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D875CC51CE908F900F5F5D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D875CC71CE908F900F5F5D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D875CC91CE908F900F5F5D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D875CCC1CE908F900F5F5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D875CCE1CE908F900F5F5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D875CD31CE908F900F5F5D2 /* KISSWebViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KISSWebViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D875CD71CE908F900F5F5D2 /* KISSWebViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISSWebViewerTests.swift; sourceTree = "<group>"; };
+		5D875CD91CE908F900F5F5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D875CDE1CE908F900F5F5D2 /* KISSWebViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KISSWebViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D875CE21CE908F900F5F5D2 /* KISSWebViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISSWebViewerUITests.swift; sourceTree = "<group>"; };
+		5D875CE41CE908F900F5F5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D875CF01CE90D1A00F5F5D2 /* KWAlwaysActiveTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWAlwaysActiveTextField.swift; sourceTree = "<group>"; };
+		5D875CF21CE91A0700F5F5D2 /* KWTitlebarVisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWTitlebarVisualEffectView.swift; sourceTree = "<group>"; };
+		5D875CF81CE91FB900F5F5D2 /* KWScrollCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWScrollCaptureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5D6FA2F91B88C21400A72729 /* Frameworks */ = {
+		5D875CBF1CE908F900F5F5D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D6FA3091B88C21400A72729 /* Frameworks */ = {
+		5D875CD01CE908F900F5F5D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D875CDB1CE908F900F5F5D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,70 +78,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D6FA2F31B88C21400A72729 = {
+		5D875CB91CE908F900F5F5D2 = {
 			isa = PBXGroup;
 			children = (
-				5D6FA2FE1B88C21400A72729 /* KISSWebViewer */,
-				5D6FA30F1B88C21400A72729 /* KISSWebViewerTests */,
-				5D6FA2FD1B88C21400A72729 /* Products */,
+				5D875CC41CE908F900F5F5D2 /* KISSWebViewer */,
+				5D875CD61CE908F900F5F5D2 /* KISSWebViewerTests */,
+				5D875CE11CE908F900F5F5D2 /* KISSWebViewerUITests */,
+				5D875CC31CE908F900F5F5D2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5D6FA2FD1B88C21400A72729 /* Products */ = {
+		5D875CC31CE908F900F5F5D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D6FA2FC1B88C21400A72729 /* KISSWebViewer.app */,
-				5D6FA30C1B88C21400A72729 /* KISSWebViewerTests.xctest */,
+				5D875CC21CE908F900F5F5D2 /* KISSWebViewer.app */,
+				5D875CD31CE908F900F5F5D2 /* KISSWebViewerTests.xctest */,
+				5D875CDE1CE908F900F5F5D2 /* KISSWebViewerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D6FA2FE1B88C21400A72729 /* KISSWebViewer */ = {
+		5D875CC41CE908F900F5F5D2 /* KISSWebViewer */ = {
 			isa = PBXGroup;
 			children = (
-				5D6FA3011B88C21400A72729 /* AppDelegate.swift */,
-				5D6FA3031B88C21400A72729 /* Images.xcassets */,
-				5D6FA3051B88C21400A72729 /* MainMenu.xib */,
-				5D6FA2FF1B88C21400A72729 /* Supporting Files */,
+				5D875CC51CE908F900F5F5D2 /* AppDelegate.swift */,
+				5D875CC71CE908F900F5F5D2 /* ViewController.swift */,
+				5D875CF01CE90D1A00F5F5D2 /* KWAlwaysActiveTextField.swift */,
+				5D875CF21CE91A0700F5F5D2 /* KWTitlebarVisualEffectView.swift */,
+				5D875CF81CE91FB900F5F5D2 /* KWScrollCaptureView.swift */,
+				5D875CC91CE908F900F5F5D2 /* Assets.xcassets */,
+				5D875CCB1CE908F900F5F5D2 /* Main.storyboard */,
+				5D875CCE1CE908F900F5F5D2 /* Info.plist */,
 			);
 			path = KISSWebViewer;
 			sourceTree = "<group>";
 		};
-		5D6FA2FF1B88C21400A72729 /* Supporting Files */ = {
+		5D875CD61CE908F900F5F5D2 /* KISSWebViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				5D6FA3001B88C21400A72729 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5D6FA30F1B88C21400A72729 /* KISSWebViewerTests */ = {
-			isa = PBXGroup;
-			children = (
-				5D6FA3121B88C21400A72729 /* KISSWebViewerTests.swift */,
-				5D6FA3101B88C21400A72729 /* Supporting Files */,
+				5D875CD71CE908F900F5F5D2 /* KISSWebViewerTests.swift */,
+				5D875CD91CE908F900F5F5D2 /* Info.plist */,
 			);
 			path = KISSWebViewerTests;
 			sourceTree = "<group>";
 		};
-		5D6FA3101B88C21400A72729 /* Supporting Files */ = {
+		5D875CE11CE908F900F5F5D2 /* KISSWebViewerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5D6FA3111B88C21400A72729 /* Info.plist */,
+				5D875CE21CE908F900F5F5D2 /* KISSWebViewerUITests.swift */,
+				5D875CE41CE908F900F5F5D2 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = KISSWebViewerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5D6FA2FB1B88C21400A72729 /* KISSWebViewer */ = {
+		5D875CC11CE908F900F5F5D2 /* KISSWebViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D6FA3161B88C21400A72729 /* Build configuration list for PBXNativeTarget "KISSWebViewer" */;
+			buildConfigurationList = 5D875CE71CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewer" */;
 			buildPhases = (
-				5D6FA2F81B88C21400A72729 /* Sources */,
-				5D6FA2F91B88C21400A72729 /* Frameworks */,
-				5D6FA2FA1B88C21400A72729 /* Resources */,
+				5D875CBE1CE908F900F5F5D2 /* Sources */,
+				5D875CBF1CE908F900F5F5D2 /* Frameworks */,
+				5D875CC01CE908F900F5F5D2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -123,47 +148,69 @@
 			);
 			name = KISSWebViewer;
 			productName = KISSWebViewer;
-			productReference = 5D6FA2FC1B88C21400A72729 /* KISSWebViewer.app */;
+			productReference = 5D875CC21CE908F900F5F5D2 /* KISSWebViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5D6FA30B1B88C21400A72729 /* KISSWebViewerTests */ = {
+		5D875CD21CE908F900F5F5D2 /* KISSWebViewerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D6FA3191B88C21400A72729 /* Build configuration list for PBXNativeTarget "KISSWebViewerTests" */;
+			buildConfigurationList = 5D875CEA1CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewerTests" */;
 			buildPhases = (
-				5D6FA3081B88C21400A72729 /* Sources */,
-				5D6FA3091B88C21400A72729 /* Frameworks */,
-				5D6FA30A1B88C21400A72729 /* Resources */,
+				5D875CCF1CE908F900F5F5D2 /* Sources */,
+				5D875CD01CE908F900F5F5D2 /* Frameworks */,
+				5D875CD11CE908F900F5F5D2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5D6FA30E1B88C21400A72729 /* PBXTargetDependency */,
+				5D875CD51CE908F900F5F5D2 /* PBXTargetDependency */,
 			);
 			name = KISSWebViewerTests;
 			productName = KISSWebViewerTests;
-			productReference = 5D6FA30C1B88C21400A72729 /* KISSWebViewerTests.xctest */;
+			productReference = 5D875CD31CE908F900F5F5D2 /* KISSWebViewerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5D875CDD1CE908F900F5F5D2 /* KISSWebViewerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D875CED1CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewerUITests" */;
+			buildPhases = (
+				5D875CDA1CE908F900F5F5D2 /* Sources */,
+				5D875CDB1CE908F900F5F5D2 /* Frameworks */,
+				5D875CDC1CE908F900F5F5D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D875CE01CE908F900F5F5D2 /* PBXTargetDependency */,
+			);
+			name = KISSWebViewerUITests;
+			productName = KISSWebViewerUITests;
+			productReference = 5D875CDE1CE908F900F5F5D2 /* KISSWebViewerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5D6FA2F41B88C21400A72729 /* Project object */ = {
+		5D875CBA1CE908F900F5F5D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = DrabWeb;
 				TargetAttributes = {
-					5D6FA2FB1B88C21400A72729 = {
-						CreatedOnToolsVersion = 6.4;
+					5D875CC11CE908F900F5F5D2 = {
+						CreatedOnToolsVersion = 7.2;
 					};
-					5D6FA30B1B88C21400A72729 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 5D6FA2FB1B88C21400A72729;
+					5D875CD21CE908F900F5F5D2 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 5D875CC11CE908F900F5F5D2;
+					};
+					5D875CDD1CE908F900F5F5D2 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 5D875CC11CE908F900F5F5D2;
 					};
 				};
 			};
-			buildConfigurationList = 5D6FA2F71B88C21400A72729 /* Build configuration list for PBXProject "KISSWebViewer" */;
+			buildConfigurationList = 5D875CBD1CE908F900F5F5D2 /* Build configuration list for PBXProject "KISSWebViewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -171,28 +218,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 5D6FA2F31B88C21400A72729;
-			productRefGroup = 5D6FA2FD1B88C21400A72729 /* Products */;
+			mainGroup = 5D875CB91CE908F900F5F5D2;
+			productRefGroup = 5D875CC31CE908F900F5F5D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5D6FA2FB1B88C21400A72729 /* KISSWebViewer */,
-				5D6FA30B1B88C21400A72729 /* KISSWebViewerTests */,
+				5D875CC11CE908F900F5F5D2 /* KISSWebViewer */,
+				5D875CD21CE908F900F5F5D2 /* KISSWebViewerTests */,
+				5D875CDD1CE908F900F5F5D2 /* KISSWebViewerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5D6FA2FA1B88C21400A72729 /* Resources */ = {
+		5D875CC01CE908F900F5F5D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6FA3041B88C21400A72729 /* Images.xcassets in Resources */,
-				5D6FA3071B88C21400A72729 /* MainMenu.xib in Resources */,
+				5D875CCA1CE908F900F5F5D2 /* Assets.xcassets in Resources */,
+				5D875CCD1CE908F900F5F5D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D6FA30A1B88C21400A72729 /* Resources */ = {
+		5D875CD11CE908F900F5F5D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D875CDC1CE908F900F5F5D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,45 +257,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5D6FA2F81B88C21400A72729 /* Sources */ = {
+		5D875CBE1CE908F900F5F5D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6FA3021B88C21400A72729 /* AppDelegate.swift in Sources */,
+				5D875CF31CE91A0700F5F5D2 /* KWTitlebarVisualEffectView.swift in Sources */,
+				5D875CF11CE90D1A00F5F5D2 /* KWAlwaysActiveTextField.swift in Sources */,
+				5D875CC81CE908F900F5F5D2 /* ViewController.swift in Sources */,
+				5D875CF91CE91FB900F5F5D2 /* KWScrollCaptureView.swift in Sources */,
+				5D875CC61CE908F900F5F5D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D6FA3081B88C21400A72729 /* Sources */ = {
+		5D875CCF1CE908F900F5F5D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6FA3131B88C21400A72729 /* KISSWebViewerTests.swift in Sources */,
+				5D875CD81CE908F900F5F5D2 /* KISSWebViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D875CDA1CE908F900F5F5D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D875CE31CE908F900F5F5D2 /* KISSWebViewerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5D6FA30E1B88C21400A72729 /* PBXTargetDependency */ = {
+		5D875CD51CE908F900F5F5D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5D6FA2FB1B88C21400A72729 /* KISSWebViewer */;
-			targetProxy = 5D6FA30D1B88C21400A72729 /* PBXContainerItemProxy */;
+			target = 5D875CC11CE908F900F5F5D2 /* KISSWebViewer */;
+			targetProxy = 5D875CD41CE908F900F5F5D2 /* PBXContainerItemProxy */;
+		};
+		5D875CE01CE908F900F5F5D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D875CC11CE908F900F5F5D2 /* KISSWebViewer */;
+			targetProxy = 5D875CDF1CE908F900F5F5D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5D6FA3051B88C21400A72729 /* MainMenu.xib */ = {
+		5D875CCB1CE908F900F5F5D2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5D6FA3061B88C21400A72729 /* Base */,
+				5D875CCC1CE908F900F5F5D2 /* Base */,
 			);
-			name = MainMenu.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5D6FA3141B88C21400A72729 /* Debug */ = {
+		5D875CE51CE908F900F5F5D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,6 +333,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -269,14 +342,13 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -284,7 +356,7 @@
 			};
 			name = Debug;
 		};
-		5D6FA3151B88C21400A72729 /* Release */ = {
+		5D875CE61CE908F900F5F5D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -314,101 +386,127 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		5D6FA3171B88C21400A72729 /* Debug */ = {
+		5D875CE81CE908F900F5F5D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KISSWebViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = drabweb.KISSWebViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		5D6FA3181B88C21400A72729 /* Release */ = {
+		5D875CE91CE908F900F5F5D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KISSWebViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = drabweb.KISSWebViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		5D6FA31A1B88C21400A72729 /* Debug */ = {
+		5D875CEB1CE908F900F5F5D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = KISSWebViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = drabweb.KISSWebViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KISSWebViewer.app/Contents/MacOS/KISSWebViewer";
 			};
 			name = Debug;
 		};
-		5D6FA31B1B88C21400A72729 /* Release */ = {
+		5D875CEC1CE908F900F5F5D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = KISSWebViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = drabweb.KISSWebViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KISSWebViewer.app/Contents/MacOS/KISSWebViewer";
+			};
+			name = Release;
+		};
+		5D875CEE1CE908F900F5F5D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KISSWebViewerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = drabweb.KISSWebViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KISSWebViewer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5D875CEF1CE908F900F5F5D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = KISSWebViewerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = drabweb.KISSWebViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KISSWebViewer;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D6FA2F71B88C21400A72729 /* Build configuration list for PBXProject "KISSWebViewer" */ = {
+		5D875CBD1CE908F900F5F5D2 /* Build configuration list for PBXProject "KISSWebViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D6FA3141B88C21400A72729 /* Debug */,
-				5D6FA3151B88C21400A72729 /* Release */,
+				5D875CE51CE908F900F5F5D2 /* Debug */,
+				5D875CE61CE908F900F5F5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D6FA3161B88C21400A72729 /* Build configuration list for PBXNativeTarget "KISSWebViewer" */ = {
+		5D875CE71CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D6FA3171B88C21400A72729 /* Debug */,
-				5D6FA3181B88C21400A72729 /* Release */,
+				5D875CE81CE908F900F5F5D2 /* Debug */,
+				5D875CE91CE908F900F5F5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		5D6FA3191B88C21400A72729 /* Build configuration list for PBXNativeTarget "KISSWebViewerTests" */ = {
+		5D875CEA1CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D6FA31A1B88C21400A72729 /* Debug */,
-				5D6FA31B1B88C21400A72729 /* Release */,
+				5D875CEB1CE908F900F5F5D2 /* Debug */,
+				5D875CEC1CE908F900F5F5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		5D875CED1CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D875CEE1CE908F900F5F5D2 /* Debug */,
+				5D875CEF1CE908F900F5F5D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5D6FA2F41B88C21400A72729 /* Project object */;
+	rootObject = 5D875CBA1CE908F900F5F5D2 /* Project object */;
 }

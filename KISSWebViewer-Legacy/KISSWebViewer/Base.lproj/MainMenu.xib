@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -395,7 +395,6 @@
                 <subviews>
                     <webView translatesAutoresizingMaskIntoConstraints="NO" id="x6Z-w5-0WR">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                        <animations/>
                         <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
                             <nil key="identifier"/>
                         </webPreferences>
@@ -407,7 +406,6 @@
                     <constraint firstItem="x6Z-w5-0WR" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="jfA-7I-Jyr"/>
                     <constraint firstAttribute="trailing" secondItem="x6Z-w5-0WR" secondAttribute="trailing" id="xf9-FB-S1d"/>
                 </constraints>
-                <animations/>
             </view>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="7GB-cf-n5N">
@@ -425,7 +423,6 @@
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJ5-8v-OD5" userLabel="Back">
                                 <rect key="frame" x="-1" y="217" width="33" height="32"/>
-                                <animations/>
                                 <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSLeftFacingTriangleTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L00-WB-9LA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -436,7 +433,6 @@
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXO-NQ-yVM" userLabel="Forward">
                                 <rect key="frame" x="26" y="217" width="33" height="32"/>
-                                <animations/>
                                 <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRightFacingTriangleTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cBh-OS-au5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -447,7 +443,6 @@
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="798-pp-KwA" userLabel="Reload">
                                 <rect key="frame" x="53" y="217" width="33" height="32"/>
-                                <animations/>
                                 <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SzA-4x-VGu">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -458,7 +453,6 @@
                             </button>
                             <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LiO-8S-dxL" userLabel="URL">
                                 <rect key="frame" x="85" y="223" width="390" height="22"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" drawsBackground="YES" id="QW4-kA-g3q">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -470,7 +464,6 @@
                             </textField>
                             <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbA-dG-CWQ">
                                 <rect key="frame" x="583" y="223" width="96" height="22"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" drawsBackground="YES" usesSingleLineMode="YES" id="BE1-ha-RbW">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="ICv-oT-iWm"/>
                                     <font key="font" metaFont="system"/>
@@ -483,21 +476,18 @@
                             </textField>
                             <slider focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bk5-RN-jVB">
                                 <rect key="frame" x="481" y="224" width="96" height="21"/>
-                                <animations/>
                                 <sliderCell key="cell" state="on" focusRingType="none" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="AZ0-KB-FjK"/>
                                 <connections>
                                     <action selector="alphaSliderInteracted:" target="Voe-Tx-rLC" id="urN-fh-5Wc"/>
                                 </connections>
                             </slider>
                         </subviews>
-                        <animations/>
                     </visualEffectView>
                     <visualEffectView appearanceType="vibrantDark" misplaced="YES" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="wVv-p0-55T" userLabel="Titlebar">
                         <rect key="frame" x="0.0" y="30" width="686" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="sBB-ag-Uim"/>
                         </constraints>
-                        <animations/>
                     </visualEffectView>
                 </subviews>
                 <constraints>
@@ -509,7 +499,6 @@
                     <constraint firstItem="yyX-cm-cIx" firstAttribute="leading" secondItem="Q4M-xT-ftK" secondAttribute="leading" id="kn3-hb-wcB"/>
                     <constraint firstAttribute="trailing" secondItem="wVv-p0-55T" secondAttribute="trailing" id="whs-jY-mMe"/>
                 </constraints>
-                <animations/>
             </view>
             <point key="canvasLocation" x="246" y="-68"/>
         </window>

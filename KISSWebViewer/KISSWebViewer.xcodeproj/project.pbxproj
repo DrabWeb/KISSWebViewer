@@ -489,6 +489,7 @@
 				5D875CE91CE908F900F5F5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D875CEA1CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +498,7 @@
 				5D875CEC1CE908F900F5F5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D875CED1CE908F900F5F5D2 /* Build configuration list for PBXNativeTarget "KISSWebViewerUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +507,7 @@
 				5D875CEF1CE908F900F5F5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

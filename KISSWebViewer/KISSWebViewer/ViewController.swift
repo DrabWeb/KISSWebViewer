@@ -221,7 +221,7 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
         window.level = 20;
         
         // Make the window connect spaces
-        window.collectionBehavior = .CanJoinAllSpaces;
+        window.collectionBehavior = [NSWindowCollectionBehavior.CanJoinAllSpaces, NSWindowCollectionBehavior.FullScreenPrimary, NSWindowCollectionBehavior.Stationary];
         
         // Resize the window for PiP mode
         pipResize();
@@ -236,7 +236,7 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
         window.level = Int(CGWindowLevelKey.BaseWindowLevelKey.rawValue);
         
         // Stop the window from connecting spaces
-        window.collectionBehavior = .Default;
+        window.collectionBehavior = NSWindowCollectionBehavior.Default;
     }
     
     /// Is the tilebar visible?
@@ -380,7 +380,7 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
                 // Enable scrolling in the web view
                 webView.mainFrame.frameView.allowsScrolling = true;
             }
-                // If we are holding command...
+            // If we are holding command...
             else {
                 // Disable scrolling in the webview so we can capture the event for PiP moving
                 webView.mainFrame.frameView.allowsScrolling = false;

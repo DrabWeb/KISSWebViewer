@@ -305,6 +305,15 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
         webView.reload(self);
     }
     
+    /// Locks the aspect ratio of the window to its current aspect ratio, and removes the "Lock Aspect Ratio" menu item
+    func lockAspectRatio() {
+        // Lock the aspect ratio
+        window.aspectRatio = window.frame.size;
+        
+        // Remove the menu item
+        (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemLockAspectRatio.menu?.removeItem((NSApplication.sharedApplication().delegate as! AppDelegate).menuItemLockAspectRatio);
+    }
+    
     /// Sets up the menu items for this controller
     func setupMenuItems() {
         // Setup the menu items
@@ -314,6 +323,7 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemGoBack.target = self;
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemGoForward.target = self;
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemReload.target = self;
+        (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemLockAspectRatio.target = self;
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemTogglePictureInPictureMode.target = self;
         
         // Set the actions
@@ -322,6 +332,7 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemGoBack.action = Selector("goBack");
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemGoForward.action = Selector("goForward");
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemReload.action = Selector("reload");
+        (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemLockAspectRatio.action = Selector("lockAspectRatio");
         (NSApplication.sharedApplication().delegate as! AppDelegate).menuItemTogglePictureInPictureMode.action = Selector("togglePiP");
     }
     

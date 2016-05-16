@@ -176,6 +176,9 @@
                                                 <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Lock Aspect Ratio" keyEquivalent="r" id="h0T-a7-5c1">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
                                         <menuItem title="Toggle Picture in Picture Mode" keyEquivalent="p" id="lhW-bE-pzm">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
@@ -212,6 +215,7 @@
                     <connections>
                         <outlet property="menuItemGoBack" destination="wjS-ct-ei2" id="LYd-6I-cGb"/>
                         <outlet property="menuItemGoForward" destination="sD0-y8-Qfc" id="E1z-cW-pvS"/>
+                        <outlet property="menuItemLockAspectRatio" destination="h0T-a7-5c1" id="34e-6b-hby"/>
                         <outlet property="menuItemReload" destination="sY4-Zu-jgQ" id="Dc6-d8-3Ie"/>
                         <outlet property="menuItemSelectUrlField" destination="utL-00-pz2" id="mAm-ID-6FY"/>
                         <outlet property="menuItemTogglePictureInPictureMode" destination="lhW-bE-pzm" id="BI5-r4-tGG"/>

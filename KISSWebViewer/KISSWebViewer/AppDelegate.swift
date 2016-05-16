@@ -26,6 +26,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /// View/Reload (⌘R)
     @IBOutlet weak var menuItemReload: NSMenuItem!
     
+    /// Window/Lock Aspect Ratio (⌘⌃R)
+    @IBOutlet weak var menuItemLockAspectRatio: NSMenuItem!
+    
     /// Window/Toggle Picture in Picture Mode (⌘⌥P)
     @IBOutlet weak var menuItemTogglePictureInPictureMode: NSMenuItem!
     

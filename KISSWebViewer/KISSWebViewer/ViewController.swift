@@ -11,7 +11,7 @@ import WebKit
 
 import Cocoa
 
-class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
+class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate, WebPolicyDelegate {
     
     /// The main window of this view controller
     var window : NSWindow = NSWindow();
@@ -180,6 +180,14 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
     func webView(sender: WebView!, didStartProvisionalLoadForFrame frame: WebFrame!) {
         // Update the web UI
         updateWebUI();
+    }
+    
+    func webView(webView: WebView!, decidePolicyForMIMEType type: String!, request: NSURLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!) {
+        
+        // Block google ads
+        if(request.URL!.absoluteString.hasPrefix("https://googleads.g.doubleclick.net/")) {
+            listener.ignore();
+        }
     }
     
     func windowDidExitFullScreen(notification: NSNotification) {
@@ -352,8 +360,9 @@ class ViewController: NSViewController, NSWindowDelegate, WebFrameLoadDelegate {
         // Set the window's delegate
         window.delegate = self;
         
-        // Set the web view's frame's delegate
+        // Set the web view's delegates
         webView.frameLoadDelegate = self;
+        webView.policyDelegate = self;
         
         // Setup the menu items
         setupMenuItems();
